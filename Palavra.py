@@ -3,7 +3,7 @@ import os
 print("bem vindo, tente acertar a palavra")
 
 
-palavra = 'kaique'
+palavra = 'Futebol'
 
 erros = 5
 
