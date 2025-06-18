@@ -27,7 +27,7 @@ Para executar este jogo no seu ambiente local, siga os passos abaixo:
     cd Jogo-adivinhar-a-palavra
     ```
 
-3.  **Execute o Script:** Navegue até o diretório onde o arquivo `forca.py` está salvo e execute-o via terminal:
+3.  **Execute o Script:** Navegue até o diretório onde o arquivo `Jogo-adivinhar-a-palavra.py` está salvo e execute-o via terminal:
 
     ```bash
     python Jogo-adivinhar-a-palavra.py
