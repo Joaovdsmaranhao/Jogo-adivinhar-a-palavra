@@ -62,7 +62,7 @@ O código é modularizado em funções para clareza e manutenção:
 
 ## Personalização
 
-Você pode facilmente estender ou modificar as categorias e palavras existentes no jogo. Basta editar a variável `categorias` no arquivo `forca.py` conforme suas preferências:
+Você pode facilmente estender ou modificar as categorias e palavras existentes no jogo. Basta editar a variável `categorias` no arquivo `Jogo-adivinhar-a-palavra.py` conforme suas preferências:
 
 ```python
 categorias = {
