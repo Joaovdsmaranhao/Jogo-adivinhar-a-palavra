@@ -30,7 +30,7 @@ Para executar este jogo no seu ambiente local, siga os passos abaixo:
 3.  **Execute o Script:** Navegue até o diretório onde o arquivo `forca.py` está salvo e execute-o via terminal:
 
     ```bash
-    python forca.py
+    python Jogo-adivinhar-a-palavra.py
     ```
 
 ---
