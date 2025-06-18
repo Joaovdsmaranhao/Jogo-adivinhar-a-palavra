@@ -1,6 +1,3 @@
-Certo! Vamos criar um README mais profissional e técnico, ideal para GitHub e LinkedIn, mantendo a clareza e um toque de engajamento, mas com menos emojis e foco na funcionalidade do projeto.
-
----
 
 # Jogo da Forca em Python
 
