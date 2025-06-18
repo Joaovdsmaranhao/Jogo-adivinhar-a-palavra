@@ -23,8 +23,8 @@ Para executar este jogo no seu ambiente local, siga os passos abaixo:
 2.  **Clone o Repositório (se aplicável):** Se este código estiver em um repositório, clone-o para o seu ambiente local:
 
     ```bash
-    git clone <URL_DO_SEU_REPOSITORIO>
-    cd <NOME_DO_SEU_REPOSITORIO>
+    git clone https://github.com/Joaovdsmaranhao/Jogo-adivinhar-a-palavra
+    cd Jogo-adivinhar-a-palavra
     ```
 
 3.  **Execute o Script:** Navegue até o diretório onde o arquivo `forca.py` está salvo e execute-o via terminal:
