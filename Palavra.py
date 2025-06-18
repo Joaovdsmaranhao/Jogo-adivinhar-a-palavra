@@ -1,62 +1,103 @@
 import os
+import random 
 
-print("bem vindo, tente acertar a palavra")
+categorias = { 
+    'esporte': ['futebol','basquete','volei','nataçao','tenis'],
+    'animais': ['cachorro','gato','jacare','elefante','girafa'],
+    'frutas': ['maça','banana','pera','maracuja','melancia'],
+    'cozinha': ['garfo','faca','panela','prato','fogao']
+}
 
+def selecionar_palavra():
+   
+    while True:
+     
+     for i,categoria in enumerate(categorias,1):
+        print(f'{i}) {categoria}')
+        print()
+     try:
+      escolha = int(input("digite a categoria que deseja: "))
 
-palavra = 'Futebol'
+      if not escolha:
 
-erros = 5
-
-letras_certas = ''
-
-palavra_formada = ''
-
-while True:
-
- 
-    if erros == 0:
-        os.system("cls")
-        print('acabou suas tentativas, fim de jogo!')
-        print(f'a palavra certa era {palavra.upper()}')
-        break
-
-    print(f'vc ainda tem {erros} tentativas')
-
-    tentativa = input('coloque uma letra: ')
-
-    if tentativa in palavra_formada:
-        print("Esta letra ja foi computada")
+        print("a categoria não pode ser vazia!")
         continue
+     
+      lista = list(categorias.keys())
 
-    if len(tentativa) > 1:
-        print('Digite apenas UMA letra por favor!')
-        erros -= 1
-        continue
+      categoria_escolhida = lista[escolha-1] 
 
-    if tentativa in palavra:
-        letras_certas += tentativa
+      palavra_escolhida = random.choice(categorias[categoria_escolhida])
 
-    else:
-        print(f'Você errou, a letra {tentativa.upper()} não tem na palavra secreta!')
-        erros -= 1
-        continue
+      print(f'Categoria escolhia: {categoria_escolhida}')
 
-    palavra_formada = ''
+      return palavra_escolhida
+     except ValueError:
+        print("Digite um indice valido")
 
-    for letra in palavra:
-        if letra in letras_certas:
-            palavra_formada += letra
-
-        else:
-            palavra_formada += '*'
-        
-    print(palavra_formada)
-        
-    if palavra_formada == palavra:
-        os.system('cls')
-        print('Parabéns você acertou a palavra e ganhou o jogo!')
-        break
+     
+def limpar_tela():
+   os.system('cls' if os.name == 'nt' else 'clear')   
 
 
-
+def menu():
+    limpar_tela()
+    print("---Bem vindo, tente acertar a palavra---")
+    print()
     
+def jogo(palavra):
+   letras_certas = set()
+   erros = 5
+
+   while True:
+      
+      if erros == 0:
+         limpar_tela()
+         print(f"""-----Fim de jogo-----
+ A palavra certa era:
+       {palavra}
+---------------------""")
+        
+         break
+      
+      tentativa = input("Digite sua tentativa: ").lower().strip()
+
+      if len(tentativa) > 1:
+         print("Digite apenas 1 letra!")
+         continue
+      
+      if tentativa in letras_certas:
+         print("Esta letra ja foi computada")
+         continue
+      
+      if tentativa in palavra:
+         print("Parabéns, acertou a letra")
+         letras_certas.add(tentativa) 
+      else:
+         print('Você errou a letra!')
+         erros -= 1
+      palavra_formada = ''
+      for letra in palavra:
+           if letra in letras_certas:
+              palavra_formada += letra
+           else:
+                palavra_formada += "*"
+
+      print(palavra_formada)
+
+      if palavra_formada == palavra:
+         limpar_tela()
+         print(f"""----Parabéns você ganhou o jogo!----
+        A palavra era:
+            {palavra}
+ -----------------------------------""")
+         break
+      
+      print(f'Você ainda tem {erros} tentativas!')
+
+
+menu()
+palavra = selecionar_palavra()
+jogo(palavra)
+
+
