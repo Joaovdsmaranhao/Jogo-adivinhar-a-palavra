@@ -20,7 +20,7 @@ Para executar este jogo no seu ambiente local, siga os passos abaixo:
 
 1.  **Pré-requisitos:** Certifique-se de ter o **Python 3.x** instalado em sua máquina.
 
-2.  **Clone o Repositório (se aplicável):** Se este código estiver em um repositório, clone-o para o seu ambiente local:
+2.  **Clone o Repositório (se aplicável):** 
 
     ```bash
     git clone https://github.com/Joaovdsmaranhao/Jogo-adivinhar-a-palavra
